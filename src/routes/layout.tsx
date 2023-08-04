@@ -29,7 +29,7 @@ export default component$(() => {
       <div class="bg-neutral-950 w-screen md:h-screen p-4 md:w-2/5 fixed md:top-0 md:left-0 md:flex md:items-start md:justify-end md:p-10">
         <nav class="flex items-center justify-evenly md:items-start md:flex md:flex-col gap-2">
           <img
-            class="h-16 w-h-16 md:h-32 md:w-32 md:my-4 rounded-md"
+            class="h-16 w-16 md:h-32 md:w-32 md:my-4 rounded-md"
             alt='Logo of Al-Nahian Pulok'
             width={512}
             height={512}
