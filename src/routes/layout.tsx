@@ -46,7 +46,7 @@ export default component$(() => {
               class={`${activeTab.value === tab.id ? "" : "hover:opacity-50 transition"
                 } relative md:text-xl py-1 px-3`}
             >
-              <QTabPill activeTab={activeTab.value} route={tab.id} />
+              <QTabPill activeTab={activeTab.value} route={tab.id} client: idle />
               {tab.label}
             </Link>
           ))}
