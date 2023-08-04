@@ -4,22 +4,23 @@ import type { DocumentHead } from "@builder.io/qwik-city";
 export default component$(() => {
   return (
     <>
-      <h1>Hi 👋</h1>
-      <p>
-        Can't wait to see what you build with qwik!
+      <p class="text-2xl font-semibold md:text-4xl">Hey, I'm Nahian 👋</p>
+      <p class="py-10 md:text-xl text-neutral-400">
+        I am a student of Daffodil Internation University,
         <br />
-        Happy coding.
+        currently working as a Software Developer at Arogga Ltd.
+        <br />I focus on learning new things and keep up with the ever growing
+        tech communities.
       </p>
     </>
   );
 });
-
 export const head: DocumentHead = {
-  title: "Welcome to Qwik",
+  title: "Al-Nahian Pulok",
   meta: [
     {
       name: "description",
-      content: "Qwik site description",
+      content: "A Personal Website of Al-Nahian Pulok",
     },
   ],
 };
