@@ -1,14 +1,15 @@
 import { component$, Slot, useSignal } from "@builder.io/qwik";
 import { Link, type RequestHandler, useLocation } from "@builder.io/qwik-city";
-
+// import { QAnimatedPresence } from "~/components/AnimatedPresence";
+import { QTabPill } from "~/components/TabPill";
 
 export const onGet: RequestHandler = async ({ cacheControl }) => {
   // Control caching for this request for best performance and to reduce hosting costs:
   // https://qwik.builder.io/docs/caching/
   cacheControl({
     // Always serve a cached response by default, up to a week stale
-    // staleWhileRevalidate: 60 * 60 * 24 * 7,
-    staleWhileRevalidate: 60,
+    staleWhileRevalidate: 60 * 60 * 24 * 7,
+    // staleWhileRevalidate: 60,
     // Max once every 5 seconds, revalidate on the server to get a fresh version of this page
     maxAge: 5,
   });
@@ -45,19 +46,16 @@ export default component$(() => {
               class={`${activeTab.value === tab.id ? "" : "hover:opacity-50 transition"
                 } relative md:text-xl py-1 px-3`}
             >
-              {activeTab.value === tab.id && (
-                <div
-                  id="box"
-                  class="bg-neutral-800 mix-blend-lighten rounded-md absolute inset-0"
-                ></div>
-              )}
+              <QTabPill activeTab={activeTab.value} route={tab.id} />
               {tab.label}
             </Link>
           ))}
         </nav>
       </aside>
       <main class="flex-1 md:ml-[40%] px-5 py-10 md:py-32">
+        {/* <QAnimatedPresence activeTab={activeTab.value}> */}
         <Slot />
+        {/* </QAnimatedPresence> */}
       </main>
     </>
   );
