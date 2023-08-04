@@ -30,6 +30,9 @@ export default component$(() => {
         <nav class="flex items-center justify-evenly md:items-start md:flex md:flex-col gap-2">
           <img
             class="h-16 w-h-16 md:h-32 md:w-32 md:my-4 rounded-md"
+            alt='Logo of Al-Nahian Pulok'
+            width={512}
+            height={512}
             src="/icon.jpg"
           />
           {tabs.map((tab, i) => (
