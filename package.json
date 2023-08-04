@@ -25,6 +25,7 @@
     "@builder.io/qwik": "^1.2.6",
     "@builder.io/qwik-city": "^1.2.6",
     "@builder.io/qwik-react": "0.5.0",
+    "@preact/compat": "^17.1.2",
     "@types/eslint": "8.40.2",
     "@types/node": "^20.4.0",
     "@types/react": "18.2.13",
@@ -35,9 +36,10 @@
     "eslint": "8.44.0",
     "eslint-plugin-qwik": "^1.2.6",
     "postcss": "^8.4.27",
+    "preact-render-to-string": "^6.2.0",
     "prettier": "2.8.8",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "react": "npm:@preact/compat",
+    "react-dom": "npm:@preact/compat",
     "tailwindcss": "^3.3.3",
     "typescript": "5.1.6",
     "undici": "5.22.1",
@@ -46,7 +48,6 @@
     "vite-tsconfig-paths": "4.2.0"
   },
   "dependencies": {
-    "@unpic/qwik": "^0.0.25",
     "framer-motion": "^10.15.0"
   }
 }
