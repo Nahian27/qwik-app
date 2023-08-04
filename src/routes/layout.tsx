@@ -26,10 +26,10 @@ export default component$(() => {
 
   return (
     <>
-      <div class="bg-neutral-950 w-screen md:h-screen p-4 md:w-2/5 fixed md:top-0 md:left-0 md:flex md:items-start md:justify-end md:p-10">
-        <nav class="flex items-center justify-evenly md:items-start md:flex md:flex-col gap-2">
+      <aside class="md:w-2/5 w-screen md:fixed md:left-0 top-0 md:h-screen bg-neutral-950 py-4 md:p-0">
+        <nav class="flex md:-translate-x-6 md:translate-y-20 items-center justify-evenly md:justify-center md:items-end md:flex md:flex-col md:gap-5">
           <img
-            class="h-16 w-16 md:h-32 md:w-32 md:my-4 rounded-md"
+            class="h-16 w-16 md:h-32 md:w-32 rounded-md grayscale hover:grayscale-0 md:hover:scale-125 transition duration-300"
             alt='Logo of Al-Nahian Pulok'
             width={512}
             height={512}
@@ -42,7 +42,7 @@ export default component$(() => {
               onClick$={() => {
                 activeTab.value = tab.id;
               }}
-              class={`${activeTab.value === tab.id ? "" : "hover:opacity-50"
+              class={`${activeTab.value === tab.id ? "" : "hover:opacity-50 transition"
                 } relative md:text-xl py-1 px-3`}
             >
               {activeTab.value === tab.id && (
@@ -55,10 +55,10 @@ export default component$(() => {
             </Link>
           ))}
         </nav>
-      </div>
-      <div class="md:ms-[40%] py-32 px-10 md:py-32 md:px-5">
+      </aside>
+      <main class="flex-1 md:ml-[40%] px-5 py-10 md:py-32">
         <Slot />
-      </div>
+      </main>
     </>
   );
 });
