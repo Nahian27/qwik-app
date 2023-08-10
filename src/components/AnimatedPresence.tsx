@@ -7,12 +7,12 @@ import { type ReactNode } from 'react';
 function AnimatedPresence({ children, activeTab }: { children?: ReactNode[], activeTab: string }) {
     return (
         <>
-            <AnimatePresence mode={"wait"} initial={false}>
+            <AnimatePresence initial={false}>
                 <motion.div
                     key={activeTab}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
+                    // exit={{ opacity: 0 }}
                     transition={{ duration: 0.15 }}
                 >
                     {children}
