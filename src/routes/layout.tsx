@@ -59,7 +59,7 @@ export default component$(() => {
           ))}
         </nav>
       </aside>
-      <main class=" flex-1 md:ml-[30%] px-5 py-10 md:py-32">
+      <main class="flex-1 md:ml-[30%] px-5 py-10 md:py-32">
         {/* <QAnimatedPresence activeTab={activeTab.value} client:idle> */}
         <Slot />
 
